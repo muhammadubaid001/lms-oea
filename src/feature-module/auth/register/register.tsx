@@ -28,16 +28,16 @@ const Register = () => {
         <div className="login-wrapper w-100 overflow-hidden position-relative flex-wrap d-block vh-100">
           <div className="row">
             <div className="col-lg-6">
-              <div className="login-background position-relative d-lg-flex align-items-center justify-content-center d-lg-block d-none flex-wrap vh-100 overflowy-auto">
+              <div className=" position-relative d-lg-flex align-items-center justify-content-center d-lg-block d-none flex-wrap vh-100 overflowy-auto">
                 <div>
                   <ImageWithBasePath
-                    src="assets/img/authentication/authentication-01.jpg"
+                    src="assets/img/logo.png"
                     alt="Img"
                   />
                 </div>
-                <div className="authen-overlay-item  w-100 p-4">
+                {/* <div className="authen-overlay-item  w-100 p-4">
                   <h4 className="text-white mb-3">
-                    What's New on Preskool !!!
+                    What's New on our LMS !!!
                   </h4>
                   <div className="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                     <div>
@@ -98,7 +98,7 @@ const Register = () => {
                       <i className="ti ti-chevrons-right" />
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12">
@@ -106,13 +106,13 @@ const Register = () => {
                 <div className="col-md-8 mx-auto p-4">
                   <form>
                     <div>
-                      <div className=" mx-auto mb-5 text-center">
+                      {/* <div className="w-25 mx-auto text-center">
                         <ImageWithBasePath
-                          src="assets/img/authentication/authentication-logo.svg"
+                          src="assets/img/logo.png"
                           className="img-fluid"
                           alt="Logo"
                         />
-                      </div>
+                      </div> */}
                       <div className="card">
                         <div className="card-body p-4">
                           <div className=" mb-4">

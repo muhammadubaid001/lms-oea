@@ -30,12 +30,12 @@ const Login = () => {
                 />
               </div>
               <div className="authen-overlay-item  w-100 p-4">
-                <h4 className="text-white mb-3">What's New on Preskool !!!</h4>
+                <h4 className="text-white mb-3">What's New on LMS !!!</h4>
                 <div className="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                   <div>
-                    <h6>Summer Vacation Holiday Homework</h6>
+                    <h6>Summer Vacations</h6>
                     <p className="mb-0 text-truncate">
-                      The school will remain closed from April 20th to June...
+                      The university will remain closed from...
                     </p>
                   </div>
                   <Link to="#">
@@ -44,7 +44,7 @@ const Login = () => {
                 </div>
                 <div className="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                   <div>
-                    <h6>New Academic Session Admission Start(2024-25)</h6>
+                    <h6>New Academic Session Admission Start(2026-27)</h6>
                     <p className="mb-0 text-truncate">
                       An academic term is a portion of an academic year, the
                       time ....
@@ -56,7 +56,7 @@ const Login = () => {
                 </div>
                 <div className="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                   <div>
-                    <h6>Date sheet Final Exam Nursery to Sr.Kg</h6>
+                    <h6>Date sheet Final Exam BS</h6>
                     <p className="mb-0 text-truncate">
                       Dear Parents, As the final examination for the session
                       2024-25 is ...
@@ -98,9 +98,9 @@ const Login = () => {
               <div className="col-md-8 mx-auto p-4">
                 <form>
                   <div>
-                    <div className=" mx-auto mb-5 text-center">
+                    <div className="w-40 mx-auto text-center">
                       <ImageWithBasePath
-                        src="assets/img/authentication/authentication-logo.svg"
+                        src="assets/img/logo.png"
                         className="img-fluid"
                         alt="Logo"
                       />
@@ -113,7 +113,7 @@ const Login = () => {
                             Please enter your details to sign in
                           </p>
                         </div>
-                        <div className="mt-4">
+                        {/* <div className="mt-4">
                           <div className="d-flex align-items-center justify-content-center flex-wrap">
                             <div className="text-center me-2 flex-fill">
                               <Link
@@ -152,10 +152,10 @@ const Login = () => {
                               </Link>
                             </div>
                           </div>
-                        </div>
-                        <div className="login-or">
+                        </div> */}
+                        {/* <div className="login-or">
                           <span className="span-or">Or</span>
-                        </div>
+                        </div> */}
                         <div className="mb-3 ">
                           <label className="form-label">Email Address</label>
                           <div className="input-icon mb-3 position-relative">

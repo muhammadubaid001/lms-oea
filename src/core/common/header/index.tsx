@@ -85,15 +85,18 @@ const Header = () => {
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <Link to={routes.adminDashboard} className="logo logo-normal">
-            <ImageWithBasePath src="assets/img/logo.svg" alt="Logo" />
+          <span className="text-primary fw-bold fs-3">
+            LMS
+          </span>
+          {/* <Link to={routes.adminDashboard} className="w-4 h-10">
+            <ImageWithBasePath src="assets/img/logo.png" alt="Logo" />
           </Link>
           <Link to={routes.adminDashboard} className="logo-small">
             <ImageWithBasePath src="assets/img/logo-small.svg" alt="Logo" />
           </Link>
           <Link to={routes.adminDashboard} className="dark-logo">
             <ImageWithBasePath src="assets/img/logo-dark.svg" alt="Logo" />
-          </Link>
+          </Link> */}
           <Link id="toggle_btn" to="#" onClick={handleToggleMiniSidebar}>
             <i className="ti ti-menu-deep" />
           </Link>

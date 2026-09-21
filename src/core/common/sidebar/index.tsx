@@ -133,7 +133,7 @@ const Sidebar = () => {
         <PerfectScrollbar>
           <div className="sidebar-inner slimscroll">
             <div id="sidebar-menu" className="sidebar-menu">
-              <ul>
+              {/* <ul>
                 <li>
                   <Link
                     to="#"
@@ -149,7 +149,7 @@ const Sidebar = () => {
                     </span>
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
 
               <ul>
                 {SidebarData?.map((mainLabel, index) => (
