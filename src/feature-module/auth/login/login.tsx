@@ -98,7 +98,7 @@ const Login = () => {
               <div className="col-md-8 mx-auto p-4">
                 <form>
                   <div>
-                    <div className="w-40 mx-auto text-center">
+                    <div className="w-25 md:w-40 mx-auto text-center">
                       <ImageWithBasePath
                         src="assets/img/logo.png"
                         className="img-fluid"
