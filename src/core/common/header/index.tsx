@@ -85,12 +85,13 @@ const Header = () => {
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <span className="text-primary fw-bold fs-3">
-            LMS
-          </span>
-          {/* <Link to={routes.adminDashboard} className="w-4 h-10">
+          <Link to={routes.adminDashboard} style={{ width: "30px", objectFit: "contain" }} className="logo">
             <ImageWithBasePath src="assets/img/logo.png" alt="Logo" />
           </Link>
+          <span className="text-primary fw-bold fs-4">
+            LMS
+          </span>
+          {/* 
           <Link to={routes.adminDashboard} className="logo-small">
             <ImageWithBasePath src="assets/img/logo-small.svg" alt="Logo" />
           </Link>
@@ -167,7 +168,7 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              <div className="pe-1 ms-1">
+              {/* <div className="pe-1 ms-1">
                 <div className="dropdown">
                   <Link
                     to="#"
@@ -236,7 +237,7 @@ const Header = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="pe-1">
                 <div className="dropdown">
                   <Link
@@ -329,9 +330,8 @@ const Header = () => {
                 )}
               </div>
               <div
-                className={`pe-1 ${
-                  notificationVisible ? "notification-item-show" : ""
-                }`}
+                className={`pe-1 ${notificationVisible ? "notification-item-show" : ""
+                  }`}
                 id="notification_item"
               >
                 <Link
@@ -490,7 +490,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="pe-1">
+              {/* <div className="pe-1">
                 <Link
                   to={routes.chat}
                   className="btn btn-outline-light bg-white btn-icon position-relative me-1"
@@ -498,7 +498,7 @@ const Header = () => {
                   <i className="ti ti-brand-hipchat" />
                   <span className="chat-status-dot" />
                 </Link>
-              </div>
+              </div> 
               <div className="pe-1">
                 <Link
                   to="#"
@@ -506,7 +506,7 @@ const Header = () => {
                 >
                   <i className="ti ti-chart-bar" />
                 </Link>
-              </div>
+              </div>*/}
               <div className="pe-1">
                 <Link
                   onClick={toggleFullscreen}

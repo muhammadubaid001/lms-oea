@@ -28,14 +28,14 @@ const Register = () => {
         <div className="login-wrapper w-100 overflow-hidden position-relative flex-wrap d-block vh-100">
           <div className="row">
             <div className="col-lg-6">
-              <div className=" position-relative d-lg-flex align-items-center justify-content-center d-lg-block d-none flex-wrap vh-100 overflowy-auto">
+              <div className="login-background position-relative d-lg-flex align-items-center justify-content-center d-lg-block d-none flex-wrap vh-100 overflowy-auto">
                 <div>
                   <ImageWithBasePath
                     src="assets/img/logo.png"
                     alt="Img"
                   />
                 </div>
-                {/* <div className="authen-overlay-item  w-100 p-4">
+                 <div className="authen-overlay-item  w-100 p-4">
                   <h4 className="text-white mb-3">
                     What's New on our LMS !!!
                   </h4>
@@ -98,7 +98,7 @@ const Register = () => {
                       <i className="ti ti-chevrons-right" />
                     </Link>
                   </div>
-                </div> */}
+                </div> 
               </div>
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12">
@@ -106,23 +106,23 @@ const Register = () => {
                 <div className="col-md-8 mx-auto p-4">
                   <form>
                     <div>
-                      {/* <div className="w-25 mx-auto text-center">
+                      <div className="w-25 mx-auto text-center">
                         <ImageWithBasePath
                           src="assets/img/logo.png"
                           className="img-fluid"
                           alt="Logo"
                         />
-                      </div> */}
+                      </div>
                       <div className="card">
                         <div className="card-body p-4">
-                          <div className=" mb-4">
+                          <div className="">
                             <h2 className="mb-2">Register</h2>
                             <p className="mb-0">
                               Please enter your details to sign up
                             </p>
                           </div>
                           <div className="mt-4">
-                            <div className="d-flex align-items-center justify-content-center flex-wrap">
+                            {/* <div className="d-flex align-items-center justify-content-center flex-wrap">
                               <div className="text-center me-2 flex-fill">
                                 <Link
                                   to="3"
@@ -159,10 +159,10 @@ const Register = () => {
                                   />
                                 </Link>
                               </div>
-                            </div>
-                            <div className="login-or">
+                            </div> */}
+                            {/* <div className="login-or">
                               <span className="span-or">Or</span>
-                            </div>
+                            </div> */}
                             <div className="mb-3 ">
                               <label className="form-label">Name</label>
                               <div className="input-icon mb-3 position-relative">
@@ -263,8 +263,8 @@ const Register = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="mt-5 text-center">
-                        <p className="mb-0 ">Copyright © 2024 - Preskool</p>
+                      <div className="mt-3 text-center">
+                        <p className="mb-0 ">Copyright © 2026 - OEA</p>
                       </div>
                     </div>
                   </form>

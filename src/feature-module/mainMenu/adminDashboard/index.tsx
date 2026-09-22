@@ -437,7 +437,7 @@ const AdminDashboard = () => {
                         <div className="mb-3 mb-xl-0">
                           <div className="d-flex align-items-center flex-wrap mb-2">
                             <h1 className="text-white me-2">
-                              Welcome Back, Mr. Herald
+                              Welcome Back, Mr. Yasir
                             </h1>
                             <Link
                               to="profile"

@@ -1,21 +1,56 @@
-import  { useEffect, useState } from "react";
-import ImageWithBasePath from "../../../core/common/imageWithBasePath";
-import { Link } from "react-router-dom";
+import { useEffect, useState, type ChangeEvent } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { all_routes } from "../../router/all_routes";
+import ImageWithBasePath from "../../../core/common/imageWithBasePath";
+import CommonSelect, { type Option } from "../../../core/common/commonSelect";
 
 const Login = () => {
   const routes = all_routes;
   const [isPasswordVisible, setPasswordVisible] = useState(false);
+  const [state, setState] = useState({
+    role: '',
+    email: '',
+    password: '',
+  })
+
+  const navigate = useNavigate()
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target
+
+    setState({
+      ...state,
+      [name]: value
+    })
+  }
 
   const togglePasswordVisibility = () => {
     setPasswordVisible((prevState) => !prevState);
   };
+
   useEffect(() => {
     localStorage.setItem("menuOpened", "Dashboard");
   }, []);
+
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if(state.role === 'student'){
+      navigate(routes.studentDashboard)
+    } else if(state.role === 'teacher') {
+      navigate(routes.teacherDashboard)
+    } else if(state.role === 'parent') {
+      navigate(routes.parentDashboard)
+    } else {
+      navigate(routes.adminDashboard)
+    }
+
+    console.log(state)
+  }
+
   const date = () => {
     return new Date().getFullYear();
-  };
+  }
 
   return (
     <div className="container-fuild">
@@ -30,7 +65,7 @@ const Login = () => {
                 />
               </div>
               <div className="authen-overlay-item  w-100 p-4">
-                <h4 className="text-white mb-3">What's New on LMS !!!</h4>
+                <h4 className="text-white mb-3">What's New on our LMS !!!</h4>
                 <div className="d-flex align-items-center flex-row mb-3 justify-content-between p-3 br-5 gap-3 card">
                   <div>
                     <h6>Summer Vacations</h6>
@@ -96,7 +131,7 @@ const Login = () => {
           <div className="col-lg-6 col-md-12 col-sm-12">
             <div className="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap ">
               <div className="col-md-8 mx-auto p-4">
-                <form>
+                <form onSubmit={handleLogin}>
                   <div>
                     <div className="w-25 md:w-40 mx-auto text-center">
                       <ImageWithBasePath
@@ -105,6 +140,7 @@ const Login = () => {
                         alt="Logo"
                       />
                     </div>
+                    <p className="text-center text-primary fw-medium fs-4">Learning Management System</p>
                     <div className="card">
                       <div className="card-body pb-3">
                         <div className=" mb-4">
@@ -157,6 +193,17 @@ const Login = () => {
                           <span className="span-or">Or</span>
                         </div> */}
                         <div className="mb-3 ">
+
+                          <div className="mb-3">
+                            <label className="form-label">Role</label>
+                            <CommonSelect
+                              className="select"
+                              onChange={(option: Option) => setState({ ...state, role: option.value })}
+                              options={[{ value: 'admin', label: 'Admin' }, { value: 'teacher', label: 'Teacher' }, { value: 'student', label: 'Student' }, { value: 'parent', label: 'Parent' }]}
+                            />
+                          </div>
+
+
                           <label className="form-label">Email Address</label>
                           <div className="input-icon mb-3 position-relative">
                             <span className="input-icon-addon">
@@ -164,7 +211,9 @@ const Login = () => {
                             </span>
                             <input
                               type="text"
-                              defaultValue=""
+                              value={state.email}
+                              name="email"
+                              onChange={handleChange}
                               className="form-control"
                             />
                           </div>
@@ -173,11 +222,13 @@ const Login = () => {
                             <input
                               type={isPasswordVisible ? "text" : "password"}
                               className="pass-input form-control"
+                              value={state.password}
+                              name="password"
+                              onChange={handleChange}
                             />
                             <span
-                              className={`ti toggle-password ${
-                                isPasswordVisible ? "ti-eye" : "ti-eye-off"
-                              }`}
+                              className={`ti toggle-password ${isPasswordVisible ? "ti-eye" : "ti-eye-off"
+                                }`}
                               onClick={togglePasswordVisibility}
                             />
                           </div>
@@ -193,7 +244,7 @@ const Login = () => {
                             <p className="ms-1 mb-0 ">Remember Me</p>
                           </div>
                           <div className="text-end ">
-                            <Link to={routes.forgotPassword}className="link-danger">
+                            <Link to={routes.forgotPassword} className="link-danger">
                               Forgot Password?
                             </Link>
                           </div>
@@ -201,12 +252,12 @@ const Login = () => {
                       </div>
                       <div className="p-4 pt-0">
                         <div className="mb-3">
-                          <Link
-                            to={routes.adminDashboard}
+                          <button
+                            type="submit"
                             className="btn btn-primary w-100"
                           >
                             Sign In
-                          </Link>
+                          </button>
                         </div>
                         <div className="text-center">
                           <h6 className="fw-normal text-dark mb-0">
@@ -219,8 +270,8 @@ const Login = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-5 text-center">
-                      <p className="mb-0 ">Copyright © {date()} - Preskool</p>
+                    <div className="mt-3 text-center">
+                      <p className="mb-0 ">Copyright © {date()} - OEA</p>
                     </div>
                   </div>
                 </form>
